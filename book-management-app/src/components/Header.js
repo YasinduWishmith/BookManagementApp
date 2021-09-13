@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Header>
+        <header>
             <h1>Book Management System</h1>
             <hr />
             <div className="links">
@@ -14,7 +14,7 @@ const Header = () => {
                     Add Book
                 </NavLink>
             </div>
-        </Header>
+        </header>
     );
 }
 
