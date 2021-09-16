@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import BookForm from './BookForm';
 import { useParams } from 'react-router';
+import BooksContext from '../context/BooksContext';
 
-const EditBook  = ({history, books, setBooks}) => {
+const EditBook  = ({history}) => {
+
+    const { books, setBooks } = useContext(BooksContext);
+
     const {id} = useParams();
     const bookToEdit = books.find((book) => book.id === id);
 

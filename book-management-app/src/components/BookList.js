@@ -1,9 +1,12 @@
-import React from "react";
+import React , {useContext} from "react";
 import _ from 'lodash';
 import Book from "./Book";
+import BooksContext from "../context/BooksContext";
 
-const BookList = ({books, setBooks}) => {
-   
+const BookList = () => {
+
+    const { books, setBooks } = useContext(BooksContext);
+ 
     const handleRemoveBook = (id) => {
         setBooks(books.filter((book) => book.id !== id));
     };
